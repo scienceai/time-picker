@@ -1,0 +1,19 @@
+
+.time-picker {
+  width: fit-content;
+  padding: calc(var(--spacing-unit, 8px) / 2) var(--spacing-medium, 16px);
+  border: 1px solid var(--middle-grey, #ebebeb);
+  border-radius: calc(var(--spacing-unit, 8px) / 2);
+}
+.time-picker input {
+  width: 2ch;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  overflow: visible;
+}
+/* for when you need to center the picker but text-align does nothing */
+.time-picker__container {
+  display: flex;
+  justify-content: space-around;
+}

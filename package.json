@@ -1,0 +1,64 @@
+{
+  "name": "time-picker",
+  "version": "0.0.0",
+  "description": " A very simple React time picker",
+  "main": "dist/index.js",
+  "style": "src/time-picker.css",
+  "scripts": {
+    "test": "node -c dist/index.js",
+    "watch-css": "cssnow -w example/app.css example/app.min.css",
+    "watch-js": "babel -w src -d dist",
+    "watch-example": "watchify example/app.js -t babelify -o example/bundle.js -dv",
+    "watch": "http-server example/ & npm run watch-js & npm run watch-example & npm run watch-css",
+    "subtree-push": "git subtree push --prefix example origin gh-pages",
+    "build": "rm -rf dist; mkdir dist; babel src -d dist",
+    "prepublish": "npm run build && npm run subtree-push"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "scienceai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scienceai/time-picker.git"
+  },
+  "keywords": [
+    "react",
+    "time",
+    "picker",
+    "ui"
+  ],
+  "author": "Robin Berjon <robin@berjon.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/scienceai/time-picker/issues"
+  },
+  "homepage": "https://github.com/scienceai/time-picker",
+  "devDependencies": {
+    "babel-cli": "6.14.0",
+    "babel-core": "6.14.0",
+    "babel-preset-es2015": "6.14.0",
+    "babel-preset-react": "6.11.1",
+    "babel-register": "6.14.0",
+    "babelify": "7.3.0",
+    "cssnow": "2.0.0",
+    "eslint-config-scienceai": "1.4.2",
+    "http-server": "0.9.0",
+    "react": "15.3.1",
+    "react-dom": "15.3.1",
+    "watchify": "3.7.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "dependencies": {
+    "clone-date": "1.0.3",
+    "lodash": "4.15.0"
+  }
+}
