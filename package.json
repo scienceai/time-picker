@@ -1,6 +1,6 @@
 {
   "name": "time-picker",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": " A very simple React time picker",
   "main": "dist/index.js",
   "style": "src/time-picker.css",
